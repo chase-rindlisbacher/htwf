@@ -4,4 +4,10 @@ from django.shortcuts import render
 
 
 def indexPageView(request):
-    return render()
+    data = {
+        'jeremy':,
+        'ty':,
+        'dalyn':,
+        'chase':,
+    }
+    return render('whatilearned.html')
