@@ -11310,7 +11310,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/red-bg.jpg") no-repeat center center;
+  background: url("../assets/img/coffee-shop-cropped.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -11318,12 +11318,12 @@ header.masthead {
 header.masthead:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color: #21212A; /*original: #1c375e*/
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
