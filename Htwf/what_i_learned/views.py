@@ -8,13 +8,13 @@ def indexPageView(request):
     ty = ''
     dalyn = ''
     chase = ''
-    if request.Post.get('name') == 'chase' :
+    if request.post.get('name') == 'chase' :
         chase = ''
-    if request.Post.get('name') == 'ty' :
+    if request.post.get('name') == 'ty' :
         ty = ''
-    if request.Post.get('name') == 'dalyn' :
+    if request.post.get('name') == 'dalyn' :
         dalyn = ''
-    if request.Post.get('name') == 'jeremy' :
+    if request.post.get('name') == 'jeremy' :
         jeremy = ''
     data = {
         'jeremy': jeremy,
