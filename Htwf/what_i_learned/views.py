@@ -4,22 +4,16 @@ from django.shortcuts import render
 
 
 def indexPageView(request):
-    jeremy = ''
-    ty = ''
-    dalyn = ''
-    chase = ''
+    result = ''
     if request.POST.get('name') == 'chase' :
-        chase = ''
+        result = ''
     if request.POST.get('name') == 'ty' :
-        ty = ''
+        result = ''
     if request.POST.get('name') == 'dalyn' :
-        dalyn = ''
+        result = ''
     if request.POST.get('name') == 'jeremy' :
-        jeremy = ''
+        result = ''
     data = {
-        'jeremy': jeremy,
-        'ty': ty,
-        'dalyn': dalyn,
-        'chase': chase,
+        'result' : result
     }
     return render(request, 'whatilearned.html', data)
