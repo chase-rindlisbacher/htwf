@@ -76,6 +76,13 @@
   }
 }
 
+/*our created styles */
+
+.italics { 
+  font-style: italic;
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
