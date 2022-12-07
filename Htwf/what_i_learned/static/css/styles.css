@@ -82,6 +82,11 @@
   border: 3px solid #73AD21;
 }
 
+.white-line {
+  border: 3px solid #ffffff;
+}
+
+
 .HTWF-text-block {
   width: 1300px;
   text-align: left;
@@ -96,6 +101,10 @@
   padding-top: 25px;
   flex: 0 0 auto;
   width: 50%;
+}
+
+.mb-5-modified {
+  margin-bottom: 1rem !important;
 }
 
 /*end our styles*/

@@ -48,7 +48,11 @@
               <h1 class="mb-5">Welcome to our HTWF Project!</h1>
               <br>
               <br>
-              <h4 class="mb-5">Select one of the names below to read what we learned!</h4>
+              <br>
+              <br>
+              <div>
+                <h4>Select one of the names below to read what we learned!</h4> <!--was class="mb-5"-->
+              </div>
               <!-- Signup form-->
               <!-- * * * * * * * * * * * * * * *-->
               <!-- * * SB Forms Contact Form * *-->
@@ -57,7 +61,6 @@
               <!-- To make this form functional, sign up at-->
               <!-- https://startbootstrap.com/solution/contact-forms-->
               <!-- to get an API token!-->
-
               <form
                 class="form-subscribe"
                 name ='name'
@@ -77,13 +80,17 @@
                       <option value="ty">Ty Bingham</option>
                       <option value="jeremy">Jeremy Fairbanks</option>
                     </select>
-                  </div>
-                  <br>                
-                  <div class="col-auto">
                     <button id="submitButton" type="submit">
                       Submit
                     </button>
-                  </div>
+                  </div> 
+
+                  {% comment %} <div class="col-auto">
+                    <button id="submitButton" type="submit">
+                      Submit
+                    </button>
+                  </div> {% endcomment %}
+
                 </div>
               </form>
             </div>
@@ -210,17 +217,39 @@
               <h4>What {{ response|capfirst }} Learned: </h4>
               <br>
               <p class="lead mb-0" style="font-size: 20px">
-                I would like to highlight part three, chapter one in How to Win Friends and Influence People, 
-                entitled “You Can't Win an Argument.” In this chapter, Dale Carnegie says that arguments are largely useless - 
-                they do more harm than good. He tells a story of the time he was listening to a man tell a story at a banquet. 
-                The man used a quote that he claimed was from the Bible, but Dale knew that it was from Shakespeare, not the Bible. 
-                He interrupted the man and told him that the quote was from Shakespeare, not the Bible. The man disagreed, claiming 
-                that he knew for certain that it was from the Bible. 
+                My favorite chapters of this book were very close to the beginning, and I think that was
+                for good reason. These fundamental blocks of greater relationships with people are so vitally
+                important to implement in our daily lives. Whether it be in the business world or in our day-to-
+                day affairs, being genuinely interested in someone and their wellbeing, goals, and passions, and
+                remembering their name goes such a long way.
                 <br>
                 <br>
-                Dale's friend, who sat to his left, had studied Shakespeare thoroughly throughout his life and also knew that the man 
-                was wrong. Despite this, he chimed in and agreed with the man, letting Dale know that he was wrong to think that the 
-                quote was from Shakespeare.
+                I feel like I've always had a slight advantage in the name department. For some odd
+                reason I have quite an exceptional ability to remember names, especially if I can link it to a face.
+                I have noticed that I often see people from my past and address them by their name and they,
+                more likely than not, don't even remember who I am. In fact, this happened just yesterday. I
+                had run into my ex-girlfriend's old roommate, whom I hadn't seen or talked to in over 2 years. I
+                was able to call her by name, and even ask her if she was still pursuing her music major. I don't
+                write this to brag, but to try to explain the look on her face. She lit up when she realized who I
+                was and was shocked I still remembered her interests.
+                <br>
+                <br>
+                I've tried to apply this principle to my everyday life, maybe not so much remembering
+                names, but using names of people that I run into throughout the day. Every retail, fast-food, or
+                service-oriented job usually has employees wearing name tags. I started calling people by their
+                names when I thanked them or addresses them, and they were always so surprised. They often
+                don't get people saying their name in a manner like that, and I think that is so sad. The slightest
+                little thing, one extra word, can make someone's day and instantly make them remember you.
+                It made me think of other behaviors that or so small, but people just don't do.
+                <br>
+                <br>
+                I think that is what I learned the most. If you want to influence people and have people
+                like you, do the small things that others don't. “Common courtesy” really isn't so common in
+                society anymore, but I think that is really the whole point of the book. Stand out from others by
+                going the extra mile, not for yourself, but for the individuals you meet every day. Try to change
+                their life and your life will be changed. Christ never sought his own pleasure, recognition, or
+                fame. His audience and gathering came from his service to others. Service that stood out of the
+                crowds. Be different and people will notice you're different - and appreciate you for it.
               </p>
               {% else %}
               <h1>choose a name above to show some knowledge!</h1>
