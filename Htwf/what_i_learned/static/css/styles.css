@@ -76,7 +76,14 @@
   }
 }
 
-/*our created styles */
+/*our styles */
+
+.HTWF-text-block {
+  width: 1300px;
+  text-align: left;
+}
+
+/*end our styles*/
 
 .italics { 
   font-style: italic;

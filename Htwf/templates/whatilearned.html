@@ -75,10 +75,7 @@
                     </select>
                   </div>
                   <div class="col-auto">
-                    <button
-                      id="submitButton"
-                      type="submit"
-                    >
+                    <button id="submitButton" type="submit">
                       Submit
                     </button>
                   </div>
@@ -91,10 +88,10 @@
     </header>
     <!-- Icons Grid-->
     <section class="features-icons bg-light text-center">
-      <div class="container">
+      <div class="container" style="text-align: center">
         <div class="row">
           <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            {% comment %} <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="bi-window m-auto text-primary"></i>
               </div>
@@ -104,18 +101,27 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="bi-layers m-auto text-primary"></i>
-              </div>
-              <h3>Bootstrap 5 Ready</h3>
-              <p class="lead mb-0">
-                Featuring the latest build of the new Bootstrap 5 framework!
+          <div class="col-lg-4"> {% endcomment %}
+            <div class="HTWF-text-block">
+              <h4>What Ty Learned:</h4>
+              <br>
+              <p class="lead mb-0" style="font-size: 20px">
+                &emsp;I would like to highlight part three, chapter one in How to Win Friends and Influence People, 
+                entitled “You Can't Win an Argument.” In this chapter, Dale Carnegie says that arguments are largely useless - 
+                they do more harm than good. He tells a story of the time he was listening to a man tell a story at a banquet. 
+                The man used a quote that he claimed was from the Bible, but Dale knew that it was from Shakespeare, not the Bible. 
+                He interrupted the man and told him that the quote was from Shakespeare, not the Bible. The man disagreed, claiming 
+                that he knew for certain that it was from the Bible. 
+                <br>
+                <br>
+                &emsp;Dale's friend, who sat to his left, had studied Shakespeare thoroughly throughout his life and also knew that the man 
+                was wrong. Despite this, he chimed in and agreed with the man, letting Dale know that he was wrong to think that the 
+                quote was from Shakespeare.
+
               </p>
             </div>
           </div>
-          <div class="col-lg-4">
+          {% comment %} <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
                 <i class="bi-terminal m-auto text-primary"></i>
@@ -126,7 +132,7 @@
                 files!
               </p>
             </div>
-          </div>
+          </div> {% endcomment %}
         </div>
       </div>
     </section>
