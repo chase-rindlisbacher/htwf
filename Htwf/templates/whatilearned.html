@@ -41,12 +41,12 @@
     <!-- Masthead-->
     <header class="masthead" style="height: 550px">
       <div class="container position-relative">
-        <div class="row justify-content-center">
-          <div class="col-xl-6">
+        <div class="row justify-content-center"> <!--was class="row justify-content-center"-->
+          <div class="modified-header"> <!--was class="col-xl-6"-->
             <div class="text-center text-white">
               <!-- Page heading-->
               <h1 class="mb-5">Welcome to our HTWF Project!</h1>
-              <h4 class="mb-5">Pick one of us to read what we learned!</h4>
+              <h4 class="mb-5">Select one of the names below to read what we learned!</h4>
               <!-- Signup form-->
               <!-- * * * * * * * * * * * * * * *-->
               <!-- * * SB Forms Contact Form * *-->
@@ -55,18 +55,20 @@
               <!-- To make this form functional, sign up at-->
               <!-- https://startbootstrap.com/solution/contact-forms-->
               <!-- to get an API token!-->
+
               <form
                 class="form-subscribe"
                 name ='name'
                 id='name'
                 method ='post'
                 action"{% url 'index' %}"
-              >
+              > 
+
               {% csrf_token %}
                 <!-- Email address input-->
-                <div class="row">
+                <div>
                   <div class="col">
-                    <select name="names" id="names">
+                    <select name="name" id="names">
                       <option value='none'></option>
                       <option value="dalyn">Dalyn Baldwin</option>
                       <option value="chase">Chase Rindlisbacher</option>
@@ -74,6 +76,7 @@
                       <option value="jeremy">Jeremy Fairbanks</option>
                     </select>
                   </div>
+                  <br>                
                   <div class="col-auto">
                     <button id="submitButton" type="submit">
                       Submit
@@ -103,10 +106,14 @@
           </div>
           <div class="col-lg-4"> {% endcomment %}
             <div class="HTWF-text-block">
-              <h4>What Ty Learned:</h4>
+              
+              {% if response == 'none' %}
+              <h1>choose a name above to see what we learned!</h1>
+              {% elif response == 'ty' %}
+              <h4>What {{ response|capfirst }} Learned: </h4>
               <br>
               <p class="lead mb-0" style="font-size: 20px">
-                &emsp;I would like to highlight part three, chapter one in How to Win Friends and Influence People, 
+                I would like to highlight part three, chapter one in How to Win Friends and Influence People, 
                 entitled “You Can't Win an Argument.” In this chapter, Dale Carnegie says that arguments are largely useless - 
                 they do more harm than good. He tells a story of the time he was listening to a man tell a story at a banquet. 
                 The man used a quote that he claimed was from the Bible, but Dale knew that it was from Shakespeare, not the Bible. 
@@ -114,11 +121,108 @@
                 that he knew for certain that it was from the Bible. 
                 <br>
                 <br>
-                &emsp;Dale's friend, who sat to his left, had studied Shakespeare thoroughly throughout his life and also knew that the man 
+                Dale's friend, who sat to his left, had studied Shakespeare thoroughly throughout his life and also knew that the man 
                 was wrong. Despite this, he chimed in and agreed with the man, letting Dale know that he was wrong to think that the 
                 quote was from Shakespeare.
-
+                <br>
+                <br>
+                As they were leaving the party, Dale asked his friend why he had defended the man when he knew he was wrong, 
+                and he said, “Why prove to a man he is wrong? Is that going to make him like you? He didn't ask for your opinion.” 
+                <br>
+                <br>
+                Earlier in the chapter, Dale mentioned how he much he enjoyed debating and arguing with others - 
+                so much so that he was considering writing a book about it. Now I would never write a book about arguing, but I enjoy 
+                debating topics with others. 
+                <br>
+                <br>
+                A couple of weeks ago, I entered into a heated debate with my roommate about whether or not USC should make 
+                the College Football Playoff. He had some good points, and I had mine. However, instead of feeling enlightened and 
+                content when the argument was over, I felt a little annoyed that he thought he knew better than me. Shortly after, I 
+                thought back to this chapter and recognized my mistake. 
+                <br>
+                <br>
+                This book has helped me realize that there is a time and a place for arguing. Too often, tempers flare and 
+                enemies are made when an argument is takes place. I plan to further explore when a debate is appropriate and how to 
+                conduct myself so as to keep my friends.
               </p>
+              {% elif response == 'dalyn'%}
+              <h4>What {{ response|capfirst }} Learned: </h4>
+              <br>
+              <p class="lead mb-0" style="font-size: 20px">
+                One part I learned is from the chapter "A Simple Way to Make a Good First Impression.” In this chapter, Carnegie 
+                argues that making a good first impression is crucial because it sets the tone for the rest of your interaction with 
+                someone. If you make a poor first impression, it can be difficult to recover and build a positive relationship.
+                <br>
+                <br>
+                Carnegie suggests that the key to making a good first impression is to focus on the other person and show genuine 
+                interest in them. This means asking questions and actively listening to their answers, rather than simply talking 
+                about yourself. By showing the other person that you are interested in them and what they have to say, you can create 
+                a positive impression and lay the foundation for a successful relationship.
+                <br>
+                <br>
+                However, it's important to avoid being fake. Carnegie suggests it's just as important to be yourself when making a 
+                first impression. This means being authentic and genuine, rather than trying to put on an act or impress the other person 
+                with false statements. By being yourself, you can show the other person that you are trustworthy and sincere.
+                <br>
+                <br>
+                In my own life, I have found that making a good first impression is crucial in both personal and professional interactions. 
+                I try to focus on the other person and show genuine interest in them by asking questions and actively listening to their 
+                answers. I also make an effort to be positive and enthusiastic, smiling, making eye contact, and using a firm handshake 
+                to show that I am confident and approachable. And, most importantly, I strive to be myself and be authentic in all of my 
+                interactions, so that the other person can see that I am sincere and trustworthy.
+                <br>
+                <br>
+                I have found that these strategies have helped me to make a good first impression in a variety of situations, from meeting 
+                new people at social events to interviewing for a job. By creating a positive first impression, I have been able to build 
+                strong relationships with others and establish a positive reputation for myself. I believe that making a good first 
+                impression is an essential skill that can benefit anyone in both their personal and professional lives.
+              </p>
+              {% elif response == 'chase'%}
+              <h4>What {{ response|capfirst }} Learned: </h4>
+              <br>
+              <p class="lead mb-0" style="font-size: 20px">
+                I learned a lot this semester from reading How to Win Friends and Influence People, but I think the most impactful 
+                things that I was able to learn and apply was to not directly contradict people. The stories shared in both the 
+                sections covering these topics were awesome, I especially loved reading about the progression Ben Franklin made 
+                from a very unagreeable man to one of the most affable and open minded individuals in the history of our country.
+                <br>
+                <br> 
+                I don't feel that I'm a very disagreeable person, but I do enjoy being right and having that acknowledged. However, 
+                after reading, “A Sure Way of Making Enemies and How to Avoid It”, I have been conscious to avoid directly contradicting 
+                my roommates, group members, and everyone else I interact with daily and the results were pretty cool. I work at the BYU 
+                Store and frequently get told by customers that they've seen or heard about certain items we carry in the store that I 
+                know we don't. In the past, I'd simply expressed this to them which led to disbelief, aggravation, and them asking me 
+                impatiently to check our systems. I changed my tactic in these situations now and my experience with the customers has 
+                improved vastly. Rather than saying we don't carry something, I might say something to the effect of, “Oh, I don't think 
+                I've seen something like that before, but I'd love to check our inventory for it really quickly.” Then I check the computer 
+                systems and confirm we don't have it. Rather than frustration and annoyance, customers much more frequently express 
+                gratitude for my willingness to help. Plus, sometimes I'm wrong and then I've learned something and the customer gets what 
+                they want. 
+                <br>
+                <br>
+                By not directly telling others they're wrong, and by keeping yourself open to the possibility that you could be 
+                incorrect, you help others opinions to change easier to match your own, or you'll learn something you understood incorrectly 
+                before.
+              </p>
+              {% elif response == 'jeremy'%}
+              <h4>What {{ response|capfirst }} Learned: </h4>
+              <br>
+              <p class="lead mb-0" style="font-size: 20px">
+                I would like to highlight part three, chapter one in How to Win Friends and Influence People, 
+                entitled “You Can't Win an Argument.” In this chapter, Dale Carnegie says that arguments are largely useless - 
+                they do more harm than good. He tells a story of the time he was listening to a man tell a story at a banquet. 
+                The man used a quote that he claimed was from the Bible, but Dale knew that it was from Shakespeare, not the Bible. 
+                He interrupted the man and told him that the quote was from Shakespeare, not the Bible. The man disagreed, claiming 
+                that he knew for certain that it was from the Bible. 
+                <br>
+                <br>
+                Dale's friend, who sat to his left, had studied Shakespeare thoroughly throughout his life and also knew that the man 
+                was wrong. Despite this, he chimed in and agreed with the man, letting Dale know that he was wrong to think that the 
+                quote was from Shakespeare.
+              </p>
+              {% else %}
+              <h1>choose a name above to show some knowledge!</h1>
+              {% endif %} 
             </div>
           </div>
           {% comment %} <div class="col-lg-4">

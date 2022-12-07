@@ -4,22 +4,37 @@ from django.shortcuts import render
 
 
 def indexPageView(request):
-    jeremy = ''
-    ty = ''
-    dalyn = ''
-    chase = ''
+    response = 'none'
     if request.POST.get('name') == 'chase' :
-        chase = ''
+        response = 'chase'
     if request.POST.get('name') == 'ty' :
-        ty = ''
+        response = 'ty'
     if request.POST.get('name') == 'dalyn' :
-        dalyn = ''
+        response = 'dalyn'
     if request.POST.get('name') == 'jeremy' :
-        jeremy = ''
+        response = 'jeremy'
     data = {
-        'jeremy': jeremy,
-        'ty': ty,
-        'dalyn': dalyn,
-        'chase': chase,
+        'response' : response,
     }
     return render(request, 'whatilearned.html', data)
+
+# def indexPageView(request):
+#     jeremy = 'test1'
+#     ty = 'test1'
+#     dalyn = 'test1'
+#     chase = 'test1'
+#     if request.POST.get('name') == 'chase' :
+#         chase = 'test2'
+#     if request.POST.get('name') == 'ty' :
+#         ty = 'test2'
+#     if request.POST.get('name') == 'dalyn' :
+#         dalyn = 'test2'
+#     if request.POST.get('name') == 'jeremy' :
+#         jeremy = 'test2'
+#     data = {
+#         'jeremy': jeremy,
+#         'ty': ty,
+#         'dalyn': dalyn,
+#         'chase': chase,
+#     }
+#     return render(request, 'whatilearned.html', data)
